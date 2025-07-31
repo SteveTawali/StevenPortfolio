@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built with pure HTML and CSS. Fe
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](http://localhost:8000) (when running locally)
+[View Live Portfolio](https://steventawali.netlify.app)
 
 ## ✨ Features
 
@@ -162,17 +162,7 @@ The contact form uses Formspree for email handling:
 - **Accessibility**: Proper alt tags and semantic structure
 - **Performance**: Optimized animations and minimal dependencies
 
-## 🤝 Contributing
 
-This is a personal portfolio project. For suggestions or improvements:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
