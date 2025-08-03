@@ -178,7 +178,6 @@ a {
     margin: 15px 0 20px 0;
     line-height: 1.2;
     color: #178582;
-    text-shadow: 0 0 10px #178582, 0 0 20px #178582, 0 0 30px #178582;
     font-weight: 600;
     text-align: left;
 }
@@ -195,21 +194,42 @@ a {
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #178582;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #178582, #0A1828);
     border: 2px solid #178582;
-    border-radius: 40px;
-    box-shadow: 0 0 10px #178582;
+    border-radius: 50px;
     font-size: 16px;
     color: #fff;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn:hover {
-    background: transparent;
-    color: #178582;
-    box-shadow: none;
+    background: linear-gradient(135deg, #0A1828, #178582);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(23, 133, 130, 0.4);
 }
 
 .home-info .btn-sci .sci {
@@ -218,19 +238,43 @@ a {
 
 .home-info .btn-sci .sci a {
     display: inline-flex;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
     border: 2px solid #178582;
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 12px;
+    font-size: 18px;
     color: #178582;
-    margin: 0 8px;
-    transition: .5s;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-info .btn-sci .sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #178582;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.home-info .btn-sci .sci a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .home-info .btn-sci .sci a:hover {
-    background: #178582;
     color: #fff;
-    box-shadow: 0 0 10px #178582;
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(23, 133, 130, 0.4);
 }
 
 .home-img .img-box {
